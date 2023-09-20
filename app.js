@@ -5,8 +5,10 @@ const Employee = require('./schemas/employee');
 const employeeRoutes = require('./routes/employeeRoutes');
 const employeeController = require('./controllers/employeeController');
 
+
 const app = express();
 const port = process.env.PORT || 3000; // port number
+
 
 //  MongoDB Atlas connection URL
 const uri = 'mongodb+srv://khalilladjal:123biboo987e@cluster0.todxuvc.mongodb.net/node-rest-api?retryWrites=true&w=majority';
@@ -30,7 +32,7 @@ db.once('open', () => {
 
 app.use(express.json());
 
-// Define your Express routes here
+// routing 
 app.use('/api/employees', employeeRoutes); 
 
 // Start server

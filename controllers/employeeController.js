@@ -96,7 +96,7 @@ exports.checkOut = async (req, res) => {
       return res.status(404).json({ error: 'Employee not found' });
     }
 
-    // Find the last check-in entry for the employee
+    // Find the last check-in  for the employe
     const lastCheckInEntry = employee.checkInHistory
       .slice()
       .reverse()
@@ -106,15 +106,15 @@ exports.checkOut = async (req, res) => {
       return res.status(400).json({ error: 'No matching check-in found' });
     }
 
-    // Calculate the time difference between check-in and check-out
+    // time difference between check-in and check-out
     const checkInTime = lastCheckInEntry.timestamp;
     const checkOutTime = new Date();
     const timeDifference = checkOutTime - checkInTime; // in milliseconds
 
-    // Convert the time difference to minutes (or any other desired unit)
+    // time difference to minutes converting
     const minutesDifference = Math.floor(timeDifference / (1000 * 60));
 
-    // Add the check-out entry to the employee's history with the calculated duration
+    // Add the check-out entry to the employee's history with the duration
     employee.checkInHistory.push({
       timestamp: checkOutTime,
       comment,
