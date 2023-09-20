@@ -1,7 +1,6 @@
 // controllers/employeeController.js
 const Employee = require('../schemas/employee');
-// Importing schemas, routes, and controllers
-const Employee = require('./schemas/employee');
+
 
 
 // Function to create a new employee

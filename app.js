@@ -1,9 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
 // Importing schemas, routes, and controllers
-const Employee = require('./schemas/employee');
+
 const employeeRoutes = require('./routes/employeeRoutes');
-const employeeController = require('./controllers/employeeController');
+
 
 
 const app = express();
